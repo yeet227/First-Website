@@ -1,16 +1,38 @@
-// Add a simple interactive behavior when the button is clicked
+// Professional interactions and state management
 document.addEventListener("DOMContentLoaded", () => {
-  const actionBtn = document.getElementById("actionBtn");
-  const feedback = document.getElementById("feedback");
+  const newsletterForm = document.getElementById("newsletterForm");
+  const formFeedback = document.getElementById("formFeedback");
 
-  let clickCount = 0;
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const emailInput = newsletterForm.querySelector(".form-input");
+      
+      if (emailInput.value.trim() !== "") {
+        formFeedback.textContent = "Thank you for subscribing to updates!";
+        emailInput.value = "";
+        
+        setTimeout(() => {
+          formFeedback.textContent = "";
+        }, 4000);
+      }
+    });
+  }
 
-  actionBtn.addEventListener("click", () => {
-    clickCount++;
-    if (clickCount === 1) {
-      feedback.textContent = "Thanks for clicking! You've activated the static site script.";
-    } else {
-      feedback.textContent = `Button clicked ${clickCount} times!`;
-    }
+  // Smooth scrolling configuration for navigation anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
   });
 });
