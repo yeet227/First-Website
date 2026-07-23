@@ -1,39 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A clean, responsive, and functional static website template.">
-  <title>Welcome | Static Website</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Professional developer blog and open-source project repository hub.">
+    <title>DevNexus | Engineering Blog & Resources</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- FontAwesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <nav class="container">
-      <h1 class="logo">MyWebsite</h1>
-    </nav>
-  </header>
 
-  <main class="site-main">
-    <section class="hero container">
-      <div class="hero-content">
-        <h2>Build Something Amazing</h2>
-        <p>This is a clean, responsive, and production-ready static website template tailored for modern web standards.</p>
-        <button id="actionBtn" class="button">Click Me</button>
-        <p id="feedback" class="feedback-text" aria-live="polite"></p>
-      </div>
-    </section>
-  </main>
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="brand">
+                <i class="fa-solid fa-code brand-icon"></i>
+                <h1 class="site-title">DevNexus</h1>
+            </div>
+            <nav class="site-nav">
+                <a href="#blog" class="nav-link active">Articles</a>
+                <a href="#downloads" class="nav-link">Resources</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-link github-link">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </nav>
+        </div>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 MyWebsite. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Main Content Layout -->
+    <main class="site-main container">
+        
+        <!-- Blog Section / Primary Content Area -->
+        <section class="content-feed" id="blog">
+            <div class="feed-header">
+                <h2>Latest Insights</h2>
+                <p>Deep dives into software architecture, frontend engineering, and system design.</p>
+            </div>
 
-  <script src="script.js"></script>
+            <!-- Blog Post 1 -->
+            <article class="card post-card">
+                <div class="post-meta">
+                    <span class="badge">Architecture</span>
+                    <span class="post-date"><i class="fa-regular fa-calendar"></i> July 23, 2026</span>
+                </div>
+                <h3 class="post-title">Building Resilient Single-Page Architecture with Vanilla Frameworks</h3>
+                <div class="text-box">
+                    <p>Exploring how modern web standards, CSS variables, and native DOM APIs allow developers to craft high-performance web applications without heavy framework overhead. By leveraging modern tooling, asset pipelines remain lightweight and maintainable.</p>
+                </div>
+                <a href="#" class="read-more">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="card post-card">
+                <div class="post-meta">
+                    <span class="badge secondary">Performance</span>
+                    <span class="post-date"><i class="fa-regular fa-calendar"></i> July 18, 2026</span>
+                </div>
+                <h3 class="post-title">Optimizing Static Assets for Edge Deployment Networks</h3>
+                <div class="text-box">
+                    <p>A comprehensive look into asset distribution networks, caching policies, and bundle minimization strategies. Learn how to shave precious milliseconds off your Time to First Byte (TTFB) using automated GitHub Actions CI/CD workflows.</p>
+                </div>
+                <a href="#" class="read-more">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+        </section>
+
+        <!-- Professional Sidebar -->
+        <aside class="sidebar" id="downloads">
+            
+            <!-- Repository Downloads Box -->
+            <div class="card sidebar-widget">
+                <h3><i class="fa-solid fa-folder-open"></i> Repository Files</h3>
+                <p class="widget-desc">Direct access to the source code powering this static distribution hub.</p>
+                
+                <ul class="file-list">
+                    <li>
+                        <div class="file-info">
+                            <i class="fa-solid fa-file-code file-icon"></i>
+                            <div>
+                                <span class="file-name">index.html</span>
+                                <span class="file-size">Markup Core</span>
+                            </div>
+                        </div>
+                        <a href="https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/index.html" download class="btn-download" title="Download Raw File">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="file-info">
+                            <i class="fa-solid fa-file-css file-icon"></i>
+                            <div>
+                                <span class="file-name">styles.css</span>
+                                <span class="file-size">Stylesheet</span>
+                            </div>
+                        </div>
+                        <a href="https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/styles.css" download class="btn-download" title="Download Raw File">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="file-info">
+                            <i class="fa-solid fa-file-lines file-icon"></i>
+                            <div>
+                                <span class="file-name">script.js</span>
+                                <span class="file-size">Logic Layer</span>
+                            </div>
+                        </div>
+                        <a href="https://raw.githubusercontent.com/USERNAME/REPOSITORY/main/script.js" download class="btn-download" title="Download Raw File">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="repo-action-wrap">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="button button-full">
+                        <i class="fa-brands fa-github"></i> View Full Repo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Newsletter / Contact Box -->
+            <div class="card sidebar-widget">
+                <h3><i class="fa-solid fa-envelope"></i> Stay Updated</h3>
+                <p class="widget-desc">Get notified whenever a new open-source module drops.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required class="form-input">
+                    <button type="submit" class="button button-full">Subscribe</button>
+                    <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+                </form>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 DevNexus. Open-source under the MIT License.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
